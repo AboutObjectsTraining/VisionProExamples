@@ -9,13 +9,21 @@ import SwiftUI
 
 @main
 struct ProgrammaticModelApp: App {
-    var body: some Scene {
+    
+    var mainWindow: some Scene {
         WindowGroup {
             ContentView()
         }
-
+    }
+    
+    var toyCarSpace: some Scene {
         ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
+            ToyCarView()
         }
+    }
+    
+    var body: some Scene {
+        mainWindow
+        toyCarSpace
     }
 }

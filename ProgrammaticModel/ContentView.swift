@@ -1,7 +1,3 @@
-//
-//  ContentView.swift
-//  ProgrammaticModel
-//
 //  Created by Jonathan Lehr on 4/15/24.
 //
 
@@ -22,18 +18,20 @@ struct ContentView: View {
             Model3D(named: "Scene", bundle: realityKitContentBundle)
                 .padding(.bottom, 50)
 
-            Text("Hello, world!")
+            Text("Example: Programmatic Model")
+                .font(.largeTitle)
+                .padding(.bottom, 50)
 
             Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
-                .font(.title)
+                .font(.title2)
                 .frame(width: 360)
                 .padding(24)
                 .glassBackgroundEffect()
         }
         .padding()
-        .onChange(of: showImmersiveSpace) { _, newValue in
+        .onChange(of: showImmersiveSpace) { _, shouldShow in
             Task {
-                if newValue {
+                if shouldShow {
                     switch await openImmersiveSpace(id: "ImmersiveSpace") {
                     case .opened:
                         immersiveSpaceIsShown = true
@@ -52,6 +50,6 @@ struct ContentView: View {
     }
 }
 
-#Preview(windowStyle: .automatic) {
-    ContentView()
-}
+//#Preview(windowStyle: .automatic) {
+//    ContentView()
+//}

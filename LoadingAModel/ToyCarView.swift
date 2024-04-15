@@ -44,54 +44,8 @@ struct ToyCarView: View {
             ProgressView()
         }
         .dragRotation(sensitivity: 3)
-        .rotation3DEffect(.init(eulerAngles: eulerAngles))
-//        .transform3DEffect(.init(translation: .init(x: 0, y: 0, z: 0)))
-//        .transform3DEffect(.init(scale: .one,
-//                                 rotation: .identity,
-//                                 translation: .init(x: 0, y: 2, z: -0.5)))
-
-        
-//        RealityView { content, attachments in
-//            if let entity = try? await Entity(named: "toy_car", in: Bundle.main) {
-//                try? await configureToyCar(entity: entity)
-//                content.add(entity)
-//                self.entity = entity
-//            }
-//        } attachments: {
-//            ForEach(values, id: \.self) { value in
-//                Attachment(id: value) {
-//                    Text("Index: \(value)")
-//                }
-//            }
-//        }
-//        .dragRotation(sensitivity: 3)
-//        .rotation3DEffect(.init(eulerAngles: eulerAngles))
-//        .gesture(SpatialTapGesture().targetedToAnyEntity().onEnded{ _ in
-//            if let entity = self.entity {
-//                animateOrbit(entity: entity)
-//            }
-//        })
-//        .onTapGesture(count: 1) {
-//            if let entity = self.entity {
-//                animateOrbit(entity: entity)
-//            }
-//        }
-
-//        RealityView { content, attachments in
-//            if let entity = try? await Entity(named: "toy_car", in: Bundle.main) {
-//                try? await configureToyCar(entity: entity)
-//                content.add(entity)
-//            }
-//        } attachments: {
-//            
-//        }
-        
-//        RealityView { content in
-//            if let entity = try? await Entity(named: "toy_car", in: Bundle.main) {
-//                try? await configureToyCar(entity: entity)
-//                content.add(entity)
-//            }
-//        }
+        //.rotation3DEffect(.init(eulerAngles: eulerAngles))
+        .transform3DEffect(.init(translation: .init(x: 0, y: 0, z: 0)))
     }
     
 //    private func animateRotation(duration: Double, degrees: Double) {
@@ -140,7 +94,7 @@ struct ToyCarView: View {
 //        let boundingBox = entity.visualBounds(relativeTo: nil)
 //        boundingBox.transform(by: .)
         entity.transform.scale = [0.1, 0.1, 0.1]
-        entity.transform.translation = [0.0, 0, 0]
+        entity.transform.translation = [0, 0, 0]
 //        entity.position = [0.0, 1.0, -1.0]
         
         print(entity.components)
