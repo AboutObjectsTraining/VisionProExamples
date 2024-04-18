@@ -4,14 +4,14 @@
 import SwiftUI
 
 extension View {
-    func dragRotation() -> some View {
-        self.modifier(DragRotationModifier())
+    func yaw() -> some View {
+        self.modifier(YawModifier())
     }
 }
 
-private struct DragRotationModifier: ViewModifier {
-    @State private var yaw: Double = 0
-    @State private var baseYaw: Double = 0
+private struct YawModifier: ViewModifier {
+    @State private var yaw = 0.0
+    @State private var baseYaw = 0.0
     
     func body(content: Content) -> some View {
         content

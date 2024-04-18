@@ -13,7 +13,14 @@
 		B421B9CD2BCDC24800E89E8E /* Entity+Sunlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B421B9CC2BCDC24800E89E8E /* Entity+Sunlight.swift */; };
 		B421B9D22BCDC5AB00E89E8E /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = B421B9CF2BCDC40800E89E8E /* toy_car.usdz */; };
 		B421B9D32BCDC5DA00E89E8E /* Sunlight.skybox in Resources */ = {isa = PBXBuildFile; fileRef = B421B9D12BCDC40D00E89E8E /* Sunlight.skybox */; };
-		B421B9D52BCDD35300E89E8E /* DragRotationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B421B9D42BCDD35300E89E8E /* DragRotationModifier.swift */; };
+		B421B9D52BCDD35300E89E8E /* YawModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B421B9D42BCDD35300E89E8E /* YawModifier.swift */; };
+		B421B9D72BCEB2D300E89E8E /* PitchAndYawModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B421B9D62BCEB2D300E89E8E /* PitchAndYawModifier.swift */; };
+		B43B138C2BD158F10018C15B /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = B43B138B2BD158F10018C15B /* RealityKitContent */; };
+		B43B138E2BD158F10018C15B /* RotatingCubesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B138D2BD158F10018C15B /* RotatingCubesApp.swift */; };
+		B43B13902BD158F10018C15B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B138F2BD158F10018C15B /* ContentView.swift */; };
+		B43B13922BD158F10018C15B /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B13912BD158F10018C15B /* ImmersiveView.swift */; };
+		B43B13942BD158F30018C15B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43B13932BD158F30018C15B /* Assets.xcassets */; };
+		B43B13972BD158F30018C15B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43B13962BD158F30018C15B /* Preview Assets.xcassets */; };
 		B45868FE2BC59FDF00D7DADC /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = B45868FD2BC59FDF00D7DADC /* RealityKitContent */; };
 		B45869002BC59FDF00D7DADC /* VisionProExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45868FF2BC59FDF00D7DADC /* VisionProExamplesApp.swift */; };
 		B45869022BC59FDF00D7DADC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45869012BC59FDF00D7DADC /* ContentView.swift */; };
@@ -42,7 +49,15 @@
 		B421B9CC2BCDC24800E89E8E /* Entity+Sunlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Sunlight.swift"; sourceTree = "<group>"; };
 		B421B9CF2BCDC40800E89E8E /* toy_car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_car.usdz; sourceTree = "<group>"; };
 		B421B9D12BCDC40D00E89E8E /* Sunlight.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = Sunlight.skybox; sourceTree = "<group>"; };
-		B421B9D42BCDD35300E89E8E /* DragRotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragRotationModifier.swift; sourceTree = "<group>"; };
+		B421B9D42BCDD35300E89E8E /* YawModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YawModifier.swift; sourceTree = "<group>"; };
+		B421B9D62BCEB2D300E89E8E /* PitchAndYawModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchAndYawModifier.swift; sourceTree = "<group>"; };
+		B43B13892BD158F10018C15B /* RotatingCubes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotatingCubes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43B138D2BD158F10018C15B /* RotatingCubesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingCubesApp.swift; sourceTree = "<group>"; };
+		B43B138F2BD158F10018C15B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B43B13912BD158F10018C15B /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		B43B13932BD158F30018C15B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B43B13962BD158F30018C15B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B43B13982BD158F30018C15B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B45868F82BC59FDF00D7DADC /* VisionProExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionProExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45868FC2BC59FDF00D7DADC /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		B45868FF2BC59FDF00D7DADC /* VisionProExamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionProExamplesApp.swift; sourceTree = "<group>"; };
@@ -69,6 +84,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B43B13862BD158F10018C15B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43B138C2BD158F10018C15B /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B45868F52BC59FDF00D7DADC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,6 +135,27 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B43B138A2BD158F10018C15B /* RotatingCubes */ = {
+			isa = PBXGroup;
+			children = (
+				B43B138D2BD158F10018C15B /* RotatingCubesApp.swift */,
+				B43B138F2BD158F10018C15B /* ContentView.swift */,
+				B43B13912BD158F10018C15B /* ImmersiveView.swift */,
+				B43B13932BD158F30018C15B /* Assets.xcassets */,
+				B43B13982BD158F30018C15B /* Info.plist */,
+				B43B13952BD158F30018C15B /* Preview Content */,
+			);
+			path = RotatingCubes;
+			sourceTree = "<group>";
+		};
+		B43B13952BD158F30018C15B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B43B13962BD158F30018C15B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		B45868EF2BC59FDF00D7DADC = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +163,7 @@
 				B45868FB2BC59FDF00D7DADC /* Packages */,
 				B45869152BC5A28E00D7DADC /* LoadingAModel */,
 				B4C1A14D2BCD64C500E8ACB8 /* ProgrammaticModel */,
+				B43B138A2BD158F10018C15B /* RotatingCubes */,
 				B45868F92BC59FDF00D7DADC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +174,7 @@
 				B45868F82BC59FDF00D7DADC /* VisionProExamples.app */,
 				B45869142BC5A28E00D7DADC /* LoadingAModel.app */,
 				B4C1A14C2BCD64C500E8ACB8 /* ProgrammaticModel.app */,
+				B43B13892BD158F10018C15B /* RotatingCubes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,7 +240,8 @@
 				B4C1A1502BCD64C500E8ACB8 /* ProgrammaticModelApp.swift */,
 				B4C1A1522BCD64C500E8ACB8 /* ContentView.swift */,
 				B421B9CA2BCDC1F800E89E8E /* ToyCarView.swift */,
-				B421B9D42BCDD35300E89E8E /* DragRotationModifier.swift */,
+				B421B9D42BCDD35300E89E8E /* YawModifier.swift */,
+				B421B9D62BCEB2D300E89E8E /* PitchAndYawModifier.swift */,
 				B4C1A1542BCD64C500E8ACB8 /* ImmersiveView.swift */,
 				B421B9CC2BCDC24800E89E8E /* Entity+Sunlight.swift */,
 				B4C1A1562BCD64C600E8ACB8 /* Assets.xcassets */,
@@ -215,6 +262,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B43B13882BD158F10018C15B /* RotatingCubes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B43B139B2BD158F30018C15B /* Build configuration list for PBXNativeTarget "RotatingCubes" */;
+			buildPhases = (
+				B43B13852BD158F10018C15B /* Sources */,
+				B43B13862BD158F10018C15B /* Frameworks */,
+				B43B13872BD158F10018C15B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RotatingCubes;
+			packageProductDependencies = (
+				B43B138B2BD158F10018C15B /* RealityKitContent */,
+			);
+			productName = RotatingCubes;
+			productReference = B43B13892BD158F10018C15B /* RotatingCubes.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B45868F72BC59FDF00D7DADC /* VisionProExamples */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B458690D2BC59FEB00D7DADC /* Build configuration list for PBXNativeTarget "VisionProExamples" */;
@@ -285,6 +352,9 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					B43B13882BD158F10018C15B = {
+						CreatedOnToolsVersion = 15.3;
+					};
 					B45868F72BC59FDF00D7DADC = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -312,11 +382,21 @@
 				B45868F72BC59FDF00D7DADC /* VisionProExamples */,
 				B45869132BC5A28E00D7DADC /* LoadingAModel */,
 				B4C1A14B2BCD64C500E8ACB8 /* ProgrammaticModel */,
+				B43B13882BD158F10018C15B /* RotatingCubes */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B43B13872BD158F10018C15B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43B13972BD158F30018C15B /* Preview Assets.xcassets in Resources */,
+				B43B13942BD158F30018C15B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B45868F62BC59FDF00D7DADC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +431,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B43B13852BD158F10018C15B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43B13902BD158F10018C15B /* ContentView.swift in Sources */,
+				B43B138E2BD158F10018C15B /* RotatingCubesApp.swift in Sources */,
+				B43B13922BD158F10018C15B /* ImmersiveView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B45868F42BC59FDF00D7DADC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,10 +466,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B421B9D52BCDD35300E89E8E /* DragRotationModifier.swift in Sources */,
+				B421B9D52BCDD35300E89E8E /* YawModifier.swift in Sources */,
 				B421B9CB2BCDC1F800E89E8E /* ToyCarView.swift in Sources */,
 				B4C1A1532BCD64C500E8ACB8 /* ContentView.swift in Sources */,
 				B421B9CD2BCDC24800E89E8E /* Entity+Sunlight.swift in Sources */,
+				B421B9D72BCEB2D300E89E8E /* PitchAndYawModifier.swift in Sources */,
 				B4C1A1512BCD64C500E8ACB8 /* ProgrammaticModelApp.swift in Sources */,
 				B4C1A1552BCD64C500E8ACB8 /* ImmersiveView.swift in Sources */,
 			);
@@ -388,6 +479,58 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		B43B13992BD158F30018C15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RotatingCubes/Preview Content\"";
+				DEVELOPMENT_TEAM = QJJFB4XBRT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.RotatingCubes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		B43B139A2BD158F30018C15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RotatingCubes/Preview Content\"";
+				DEVELOPMENT_TEAM = QJJFB4XBRT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.RotatingCubes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
 		B458690B2BC59FEB00D7DADC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -666,6 +809,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B43B139B2BD158F30018C15B /* Build configuration list for PBXNativeTarget "RotatingCubes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43B13992BD158F30018C15B /* Debug */,
+				B43B139A2BD158F30018C15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B45868F32BC59FDF00D7DADC /* Build configuration list for PBXProject "VisionProExamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -705,6 +857,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B43B138B2BD158F10018C15B /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
 		B45868FD2BC59FDF00D7DADC /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
