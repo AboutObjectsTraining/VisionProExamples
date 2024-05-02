@@ -33,7 +33,6 @@ private struct PitchAndYawEntityModifier: ViewModifier {
                     
                     let deltaX = simd_quatf(angle: Float(yaw), axis: [0, 1, 0])
                     let deltaY = simd_quatf(angle: Float(-pitch), axis: [1, 0, 0])
-//                    print(pitch)
                     
                     entity.orientation = deltaY * deltaX
                 }

@@ -1,0 +1,105 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.15)"
+    }
+    defaultPrim = "Forest"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Forest"
+{
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Xform "Root"
+    {
+        def "Insta360Cube" (
+            active = true
+            prepend references = @Insta360Cube.usdc@
+        )
+        {
+            float3 xformOp:scale = (0.1, 0.1, 0.1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "_materials" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Forest/Root/Insta360Cube/_materials/Material> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+
+                over "Material"
+                {
+                    token inputs:frame:stPrimvarName = "st"
+                    token outputs:mtlx:surface.connect = </Forest/Root/Insta360Cube/_materials/Material/PreviewSurface.outputs:out>
+                    token outputs:realitykit:vertex
+                    token outputs:surface.connect = </Forest/Root/Insta360Cube/_materials/Material/Principled_BSDF.outputs:surface>
+                    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 109.5)
+                    float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+                    over "Principled_BSDF" (
+                        active = true
+                    )
+                    {
+                        color3f inputs:diffuseColor.connect = </Forest/Root/Insta360Cube/_materials/Material/diffuseColor.outputs:rgb>
+                    }
+
+                    def Shader "PreviewSurface" (
+                        active = false
+                    )
+                    {
+                        uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                        token outputs:out
+                        float2 ui:nodegraph:node:pos = (-255, 105)
+                        float2 ui:nodegraph:node:size = (148.5, 199)
+                    }
+
+                    def Shader "diffuseColor"
+                    {
+                        uniform token info:id = "UsdUVTexture"
+                        asset inputs:file = @Forest_Insta360.png@
+                        float2 inputs:st.connect = </Forest/Root/Insta360Cube/_materials/Material/diffuseColor/TexCoordReader.outputs:result>
+                        color3f outputs:rgb
+
+                        def Shader "TexCoordReader"
+                        {
+                            uniform token info:id = "UsdPrimvarReader_float2"
+                            token inputs:varname.connect = </Forest/Root/Insta360Cube/_materials/Material/Principled_BSDF.inputs:frame:stPrimvarName>
+                            float2 outputs:result
+                        }
+                    }
+                }
+            }
+
+            def RealityKitComponent "GroundingShadow"
+            {
+                bool enableIBLShadow = 1
+                bool enableMeshShadow = 1
+                uniform token info:id = "RealityKit.GroundingShadow"
+            }
+
+            def RealityKitComponent "ImageBasedLight"
+            {
+                float blendIBLsFactor = 0
+                bool enableBlend = 1
+                asset ibl = @Forest_Insta360.png@
+                uniform token info:id = "RealityKit.ImageBasedLight"
+                float intensityExponent = 0.5
+                bool isGlobalIBL = 0
+            }
+
+            def RealityKitComponent "ImageBasedLightReceiver"
+            {
+                rel iblEntity = </Forest/Root/Insta360Cube>
+                uniform token info:id = "RealityKit.ImageBasedLightReceiver"
+            }
+        }
+    }
+}
+
