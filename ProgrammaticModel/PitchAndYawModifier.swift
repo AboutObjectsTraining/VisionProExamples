@@ -6,10 +6,10 @@ import RealityKit
 
 extension View {
     func pitchAndYaw() -> some View {
-        self.modifier(PitchAndYawModifier())
+        modifier(PitchAndYawModifier())
     }
     func pitchAndYaw(targetEntity: Entity) -> some View {
-        self.modifier(PitchAndYawEntityModifier(entity: targetEntity))
+        modifier(PitchAndYawEntityModifier(entity: targetEntity))
     }
 }
 
