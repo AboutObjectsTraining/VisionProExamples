@@ -10,8 +10,24 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["Toy_Biplane", "AirplaneEngineAudio", "AntiqueAirplaneEngineStart01"]
-    def "Toy_Biplane" (
+    reorder nameChildren = ["ToyRocket3", "ToyBiplane", "AirplaneEngineAudio", "AntiqueAirplaneEngineStart01"]
+    def Xform "AirplaneEngineAudio"
+    {
+        def RealityKitComponent "AmbientAudio"
+        {
+            uniform token info:id = "RealityKit.AmbientAudio"
+        }
+    }
+
+    def "AntiqueAirplaneEngineStart01" (
+        active = true
+        references = @AntiqueAirplaneEngineStart01.usdz@
+    )
+    {
+        uniform bool shouldLoop = 1
+    }
+
+    def "ToyBiplane" (
         active = true
         prepend apiSchemas = ["MaterialBindingAPI"]
         references = @ToyBiplane.usdz@
@@ -19,7 +35,7 @@ def Xform "Root"
     {
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (1.5, 1.5, 1.5)
-        float3 xformOp:translate = (0, 1.5, -1)
+        float3 xformOp:translate = (0.25, 1.5, -1)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def RealityKitComponent "InputTarget"
@@ -29,7 +45,7 @@ def Xform "Root"
 
         def RealityKitComponent "ImageBasedLightReceiver"
         {
-            rel iblEntity = </Root/Toy_Biplane>
+            rel iblEntity = </Root/ToyBiplane>
             uniform token info:id = "RealityKit.ImageBasedLightReceiver"
         }
 
@@ -38,7 +54,7 @@ def Xform "Root"
             bool enableBlend = 0
             asset ibl = @Forest_Insta360.png@
             uniform token info:id = "RealityKit.ImageBasedLight"
-            float intensityExponent = 0.8
+            float intensityExponent = 1
             bool isGlobalIBL = 0
         }
 
@@ -49,7 +65,7 @@ def Xform "Root"
                 over "materials"
                 {
                     def Scope "materials" (
-                        references = </Root/Toy_Biplane/geom/realistic/materials>
+                        references = </Root/ToyBiplane/geom/realistic/materials>
                     )
                     {
                         def Material "usdpreviewsurface3sg" (
@@ -168,20 +184,35 @@ def Xform "Root"
         }
     }
 
-    def Xform "AirplaneEngineAudio"
-    {
-        def RealityKitComponent "AmbientAudio"
-        {
-            uniform token info:id = "RealityKit.AmbientAudio"
-        }
-    }
-
-    def "AntiqueAirplaneEngineStart01" (
+    def "ToyRocket3" (
         active = true
-        prepend references = @AntiqueAirplaneEngineStart01.usdz@
+        references = @ToyRocket.usdz@
     )
     {
-        uniform bool shouldLoop = 1
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1.5, 1.5, 1.5)
+        float3 xformOp:translate = (-0.25, 1.5, -1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def RealityKitComponent "ImageBasedLightReceiver"
+        {
+            rel iblEntity = </Root/ToyRocket3>
+            uniform token info:id = "RealityKit.ImageBasedLightReceiver"
+        }
+
+        def RealityKitComponent "ImageBasedLight"
+        {
+            bool enableRotation = 0
+            asset ibl = @Forest_Insta360.png@
+            uniform token info:id = "RealityKit.ImageBasedLight"
+            float intensityExponent = 1
+            bool isGlobalIBL = 0
+        }
     }
 }
 

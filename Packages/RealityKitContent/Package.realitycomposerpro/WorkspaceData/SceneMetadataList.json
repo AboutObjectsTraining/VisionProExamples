@@ -135,6 +135,18 @@
       },
       [
         "D1C97882-478A-4D64-A33A-09BBC6C200D7",
+        "Root",
+        "ToyBiplane"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Antique_Airplane_Engine_Start_01"
+        }
+      },
+      [
+        "D1C97882-478A-4D64-A33A-09BBC6C200D7",
         "Root"
       ],
       {
