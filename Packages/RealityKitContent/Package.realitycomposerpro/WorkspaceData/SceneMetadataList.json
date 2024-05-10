@@ -11,32 +11,20 @@
       }
     ]
   },
-  "5CF7D0C9-37DE-41D9-8F59-A2F4C2C99E0F" : {
+  "3F51B1F0-4CFE-4F4C-BFFD-3C8BCD666911" : {
     "objectMetadataList" : [
       [
-        "5CF7D0C9-37DE-41D9-8F59-A2F4C2C99E0F",
-        "Root"
+        "3F51B1F0-4CFE-4F4C-BFFD-3C8BCD666911",
+        "Forest"
       ],
       {
         "isExpanded" : true,
         "isLocked" : false
       },
       [
-        "5CF7D0C9-37DE-41D9-8F59-A2F4C2C99E0F",
-        "Root",
-        "Cube"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      }
-    ]
-  },
-  "7BEC98D8-F89F-40D9-852D-F26B40F45132" : {
-    "objectMetadataList" : [
-      [
-        "7BEC98D8-F89F-40D9-852D-F26B40F45132",
-        "Sphere"
+        "3F51B1F0-4CFE-4F4C-BFFD-3C8BCD666911",
+        "Forest",
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -56,59 +44,6 @@
       }
     ]
   },
-  "4825EFC0-A9F5-4D16-8D4F-A1E0D9E84FB5" : {
-    "objectMetadataList" : [
-      [
-        "4825EFC0-A9F5-4D16-8D4F-A1E0D9E84FB5",
-        "Forest",
-        "Root"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "4825EFC0-A9F5-4D16-8D4F-A1E0D9E84FB5",
-        "Forest",
-        "Root",
-        "Insta360Cube",
-        "_materials"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "4825EFC0-A9F5-4D16-8D4F-A1E0D9E84FB5",
-        "Forest",
-        "Root",
-        "Insta360Cube",
-        "Cube"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "4825EFC0-A9F5-4D16-8D4F-A1E0D9E84FB5",
-        "Forest",
-        "Root",
-        "Insta360Cube"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "4825EFC0-A9F5-4D16-8D4F-A1E0D9E84FB5",
-        "Forest"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      }
-    ]
-  },
   "66168B71-AB05-424E-8B6C-D33D6E61B08F" : {
     "objectMetadataList" : [
       [
@@ -121,22 +56,11 @@
       }
     ]
   },
-  "A018CF3A-534E-4BA7-9A71-2BA9BCB18886" : {
+  "A4370849-44D0-4A8D-B020-F8FE7E412BE4" : {
     "objectMetadataList" : [
       [
-        "A018CF3A-534E-4BA7-9A71-2BA9BCB18886",
-        "Root",
-        "Insta360Cube",
-        "_materials"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A018CF3A-534E-4BA7-9A71-2BA9BCB18886",
-        "Root",
-        "Insta360Cube"
+        "A4370849-44D0-4A8D-B020-F8FE7E412BE4",
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -148,7 +72,8 @@
     "objectMetadataList" : [
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root"
+        "Root",
+        "Sphere_Left"
       ],
       {
         "isExpanded" : true,
@@ -157,18 +82,14 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
-        "GridMaterial"
+        "Sphere_Right"
       ],
       {
         "isExpanded" : true,
         "isLocked" : false
-      }
-    ]
-  },
-  "C1113BE8-90F0-465C-AF77-57FA752F7F88" : {
-    "objectMetadataList" : [
+      },
       [
-        "C1113BE8-90F0-465C-AF77-57FA752F7F88",
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root"
       ],
       {
@@ -181,7 +102,8 @@
     "objectMetadataList" : [
       [
         "CB766F92-EE55-4A63-9401-E7B8C009764D",
-        "Root"
+        "Root",
+        "GridMaterial"
       ],
       {
         "isExpanded" : true,
@@ -189,8 +111,31 @@
       },
       [
         "CB766F92-EE55-4A63-9401-E7B8C009764D",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "D1C97882-478A-4D64-A33A-09BBC6C200D7" : {
+    "objectMetadataList" : [
+      [
+        "D1C97882-478A-4D64-A33A-09BBC6C200D7",
         "Root",
-        "GridMaterial"
+        "Toy_Biplane"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Antique_Airplane_Engine_Start_01"
+        }
+      },
+      [
+        "D1C97882-478A-4D64-A33A-09BBC6C200D7",
+        "Root"
       ],
       {
         "isExpanded" : true,
