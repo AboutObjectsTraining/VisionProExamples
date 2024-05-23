@@ -88,17 +88,20 @@ private struct PitchAndYawModifier: ViewModifier {
                     let location3D = value.convert(value.location3D, from: .local, to: .scene)
                     let startLocation3D = value.convert(value.startLocation3D, from: .local, to: .scene)
                     let delta = location3D - startLocation3D
-                    yaw = Double(delta.x) * sensitivity + baseYaw
                     pitch = Double(delta.y) * sensitivity + basePitch
                     
-                    let deltaX = simd_quatf(angle: Float(yaw), axis: [0, 1, 0])
-                    let deltaY = simd_quatf(angle: Float(-pitch), axis: [1, 0, 0])
+                    // let isUpsideDown = abs(pitch) > .pi / 2
+                    yaw = Double(delta.x) * sensitivity + baseYaw
                     
-                    entity.orientation = deltaY * deltaX
+                    let angleX = simd_quatf(angle: Float(yaw), axis: [0, 1, 0])
+                    let angleY = simd_quatf(angle: Float(-pitch), axis: [1, 0, 0])
+                    
+                    entity.orientation = angleY * angleX
                 }
                 .onEnded { value in
                     baseYaw = yaw
                     basePitch = pitch
+                    // print("yaw: \(yaw)")
                 }
             )
     }

@@ -15,7 +15,8 @@
     "objectMetadataList" : [
       [
         "3F51B1F0-4CFE-4F4C-BFFD-3C8BCD666911",
-        "Forest"
+        "Forest",
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -23,8 +24,7 @@
       },
       [
         "3F51B1F0-4CFE-4F4C-BFFD-3C8BCD666911",
-        "Forest",
-        "Root"
+        "Forest"
       ],
       {
         "isExpanded" : true,
@@ -73,7 +73,7 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
-        "Sphere_Left"
+        "Sphere_Right"
       ],
       {
         "isExpanded" : true,
@@ -82,7 +82,7 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
-        "Sphere_Right"
+        "Sphere_Left"
       ],
       {
         "isExpanded" : true,
@@ -124,18 +124,6 @@
       [
         "D1C97882-478A-4D64-A33A-09BBC6C200D7",
         "Root",
-        "Toy_Biplane"
-      ],
-      {
-        "isExpanded" : false,
-        "isLocked" : false,
-        "selectedAudioFilePrim" : {
-          "string" : "\/Root\/Antique_Airplane_Engine_Start_01"
-        }
-      },
-      [
-        "D1C97882-478A-4D64-A33A-09BBC6C200D7",
-        "Root",
         "ToyBiplane"
       ],
       {
@@ -152,6 +140,18 @@
       {
         "isExpanded" : true,
         "isLocked" : false
+      },
+      [
+        "D1C97882-478A-4D64-A33A-09BBC6C200D7",
+        "Root",
+        "Toy_Biplane"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Antique_Airplane_Engine_Start_01"
+        }
       }
     ]
   },
