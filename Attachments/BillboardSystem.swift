@@ -1,14 +1,6 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A RealityKit system that keeps entities with a BillboardComponent facing toward the camera.
-*/
-
 import ARKit
 import SwiftUI
 import RealityKit
-import RealityKitContent
 
 public struct BillboardSystem: System {
 
@@ -49,22 +41,20 @@ public struct BillboardSystem: System {
     }
 }
 
+
 #Preview {
     RealityView { content, attachments in
         BillboardSystem.registerSystem()
         BillboardComponent.registerComponent()
-        
-        if let entity = attachments.entity(for: "previewTag") {
-
-            let billboardComponent = BillboardComponent()
-            entity.components[BillboardComponent.self] = billboardComponent
-            
+        if let entity = attachments.entity(for: "Preview") {
+            entity.components[BillboardComponent.self] = BillboardComponent()
             content.add(entity)
         }
     } attachments: {
-        Attachment(id: "previewTag") {
+        Attachment(id: "Preview") {
             Text("Preview")
-                .font(.system(size: 100))
+                .font(.largeTitle)
+                .padding()
                 .glassBackgroundEffect()
         }
     }
