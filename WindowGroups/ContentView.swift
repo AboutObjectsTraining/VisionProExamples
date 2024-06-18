@@ -19,18 +19,30 @@ struct ContentView: View {
             Text("WindowGroups Example")
                 .font(.title)
                 .padding(50)
-
-            Toggle("Show Window Two", isOn: $viewModel.isShowingWindowTwo)
-                .font(.title2)
-                .frame(width: 360)
-                .padding(24)
-                .glassBackgroundEffect()
+            VStack {
+                Group {
+                    Toggle("Show Window Two", isOn: $viewModel.isShowingWindowTwo)
+                    Toggle("Show Window Three", isOn: $viewModel.isShowingWindowThree)
+                }
+                .padding(6)
+            }
+            .font(.title3)
+            .padding(24)
+            .frame(width: 600)
+            .glassBackgroundEffect()
         }
         .onChange(of: viewModel.isShowingWindowTwo) { _, shouldShow in
             if shouldShow {
                 openWindow(id: WindowGroupsApp.windowTwo)
             } else {
                 dismissWindow(id: WindowGroupsApp.windowTwo)
+            }
+        }
+        .onChange(of: viewModel.isShowingWindowThree) { _, shouldShow in
+            if shouldShow {
+                openWindow(id: WindowGroupsApp.windowThree)
+            } else {
+                dismissWindow(id: WindowGroupsApp.windowThree)
             }
         }
     }

@@ -1,20 +1,17 @@
 //
-//  VisionProExamplesApp.swift
-//  VisionProExamples
-//
-//  Created by Jonathan Lehr on 4/9/24.
-//
+//  Created 6/18/24 by Jonathan Lehr
+//  Copyright © 2024 About Objects.
+//  
 
 import SwiftUI
 
 @main
-struct VisionProExamplesApp: App {
+struct GesturesApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .windowStyle(.volumetric)
-        
+
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }

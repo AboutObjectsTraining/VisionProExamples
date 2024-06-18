@@ -11,6 +11,7 @@ import SwiftUI
 struct WindowGroupsApp: App {
     
     static let windowTwo = "Window Two"
+    static let windowThree = "Window Three"
     @State private var viewModel = ViewModel()
     @Environment(\.scenePhase) private var scenePhase
     
@@ -29,5 +30,19 @@ struct WindowGroupsApp: App {
                 viewModel.isShowingWindowTwo = false
             }
         }
+        
+        WindowGroup(id: Self.windowThree) {
+            Text(Self.windowThree)
+                .font(.extraLargeTitle)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.orange)
+        }
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .background {
+                viewModel.isShowingWindowThree = false
+            }
+        }
+        .defaultSize(width: 400, height: 300, depth: 100)
+        .windowStyle(.volumetric)
     }
 }

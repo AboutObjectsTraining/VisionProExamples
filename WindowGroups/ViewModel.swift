@@ -10,5 +10,6 @@ import SwiftUI
 @Observable final class ViewModel {
     
     var isShowingWindowTwo = false
+    var isShowingWindowThree = false
     
 }
