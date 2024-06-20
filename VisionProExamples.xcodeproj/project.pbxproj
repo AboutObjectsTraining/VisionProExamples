@@ -68,6 +68,7 @@
 		B493E8F02C22120200E3448E /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493E8EF2C22120200E3448E /* ImmersiveView.swift */; };
 		B493E8F22C22120400E3448E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B493E8F12C22120400E3448E /* Assets.xcassets */; };
 		B493E8F52C22120400E3448E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B493E8F42C22120400E3448E /* Preview Assets.xcassets */; };
+		B493E8FB2C22146200E3448E /* CustomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B493E8FA2C22146200E3448E /* CustomComponents.swift */; };
 		B4C1A14F2BCD64C500E8ACB8 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = B4C1A14E2BCD64C500E8ACB8 /* RealityKitContent */; };
 		B4C1A1512BCD64C500E8ACB8 /* ProgrammaticModelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1A1502BCD64C500E8ACB8 /* ProgrammaticModelApp.swift */; };
 		B4C1A1532BCD64C500E8ACB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1A1522BCD64C500E8ACB8 /* ContentView.swift */; };
@@ -170,6 +171,7 @@
 		B493E8F12C22120400E3448E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B493E8F42C22120400E3448E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B493E8F62C22120400E3448E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B493E8FA2C22146200E3448E /* CustomComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponents.swift; sourceTree = "<group>"; };
 		B4C1A14C2BCD64C500E8ACB8 /* ProgrammaticModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammaticModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C1A1502BCD64C500E8ACB8 /* ProgrammaticModelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticModelApp.swift; sourceTree = "<group>"; };
 		B4C1A1522BCD64C500E8ACB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 				B493E8EB2C22120200E3448E /* GesturesApp.swift */,
 				B493E8ED2C22120200E3448E /* ContentView.swift */,
 				B493E8EF2C22120200E3448E /* ImmersiveView.swift */,
+				B493E8FA2C22146200E3448E /* CustomComponents.swift */,
 				B493E8F12C22120400E3448E /* Assets.xcassets */,
 				B493E8F62C22120400E3448E /* Info.plist */,
 				B493E8F32C22120400E3448E /* Preview Content */,
@@ -1122,6 +1125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B493E8EE2C22120200E3448E /* ContentView.swift in Sources */,
+				B493E8FB2C22146200E3448E /* CustomComponents.swift in Sources */,
 				B493E8EC2C22120200E3448E /* GesturesApp.swift in Sources */,
 				B493E8F02C22120200E3448E /* ImmersiveView.swift in Sources */,
 			);

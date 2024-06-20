@@ -7,6 +7,12 @@ import SwiftUI
 
 @main
 struct GesturesApp: App {
+    
+    init() {
+        BlueComponent.registerComponent()
+        PinkComponent.registerComponent()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

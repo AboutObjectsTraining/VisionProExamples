@@ -10,11 +10,8 @@ import RealityKit
 import RealityKitContent
 
 struct ToyCarView: View {
-    let defaultTilt = 20.0
-    let values = ["One"]
     
     @State private var baseTransform: Transform?
-    @State private var entity: Entity?
     
     var dragGesture: some Gesture {
         DragGesture()
@@ -42,56 +39,37 @@ struct ToyCarView: View {
                 baseTransform = nil
             }
     }
-
-//    private var orbitAnimation: OrbitAnimation {
-//        OrbitAnimation(name: "orbit",
-//                       duration: 10.0,
-//                       axis: SIMD3<Float>(x: 1.0, y: 0.0, z: 0.0),
-//                       startTransform: Transform(scale: simd_float3(10,10,10),
-//                                                 rotation: simd_quatf(ix: 10, iy: 20, iz: 20, r: 100),
-//                                                 translation: simd_float3(11, 2, 3)),
-//                       spinClockwise: true,
-//                       orientToPath: true,
-//                       rotationCount: 100.0,
-//                       bindTarget: nil)
-//    }
-
+    
+    var modelUrl: URL {
+        let url = Bundle.main.path(forResource: "toy_car", ofType: "usdz") ?? ""
+        return URL(fileURLWithPath: url)
+    }
+    
     var body: some View {
         
         RealityView { content in
+            // Load with URL
+            if let entity = try? await ModelEntity(contentsOf: modelUrl) {
+                try? await configureGeometry(entity: entity)
+                try? await configureLighting(entity: entity)
+                try? await configureTouches(entity: entity)
+                content.add(entity)
+            }
+            
+            // Load with entity name
             if let entity = try? await ModelEntity(named: "toy_car") {
                 print("Loading toy car...")
                 try? await configureGeometry(entity: entity)
                 try? await configureLighting(entity: entity)
                 try? await configureTouches(entity: entity)
                 content.add(entity)
-                self.entity = entity
-                print("Loaded toy car")
             }
         } placeholder: {
             ProgressView()
         }
         .gesture(dragGesture)
     }
-    
-//    private func animateRotation(duration: Double, degrees: Double) {
-//        
-//        guard let entity = entity else { return }
-//        
-//        var currentTransform = entity.transform
-//        let rotation = simd_quatf(angle: Float(degrees), axis: [1, 0, 0])
-//        currentTransform.rotation = rotation * currentTransform.rotation
-//        entity.transform = currentTransform
-//    }
-//    
-//    
-//    private func animateOrbit(entity: Entity) {
-//        let orbit = try? AnimationResource.generate(with: orbitAnimation)
-//        if let orbit = orbit {
-//            entity.playAnimation(orbit)
-//        }
-//    }
-    
+        
     @MainActor private func configureLighting(entity: Entity) async throws {
         
         let image = try await EnvironmentResource(named: "Sunlight", in: Bundle.main)
@@ -112,12 +90,6 @@ struct ToyCarView: View {
         } else {
             entity.generateCollisionShapes(recursive: false)
         }
-    }
-    
-    @MainActor private func configureAnimations(entity: Entity) async throws {
-        
-        //        entity.availableAnimations.append(orbit)
-        //        entity.playAnimation(orbit, transitionDuration: 1.0, startsPaused: false)
     }
     
     @MainActor private func configureGeometry(entity: Entity) async throws {

@@ -30,19 +30,25 @@ struct WindowGroupsApp: App {
                 viewModel.isShowingWindowTwo = false
             }
         }
+        .defaultSize(width: 400, height: 300)
         
         WindowGroup(id: Self.windowThree) {
-            Text(Self.windowThree)
-                .font(.extraLargeTitle)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.orange)
+            ZStack {
+                Color.blue
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                Spacer()
+                Text(Self.windowThree)
+                    .font(.extraLargeTitle)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.orange)
+            }
         }
         .onChange(of: scenePhase) { _, phase in
             if phase == .background {
                 viewModel.isShowingWindowThree = false
             }
         }
-        .defaultSize(width: 400, height: 300, depth: 100)
+        .defaultSize(width: 400, height: 300, depth: 200)
         .windowStyle(.volumetric)
     }
 }
