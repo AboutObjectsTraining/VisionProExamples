@@ -13,8 +13,8 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 RoundedRectangle(cornerSize: CGSize(width: 15, height: 15))
-                    .fill(.thinMaterial)
-                Text("Content goes here")
+                    .fill(.thickMaterial)
+                Text("Content Area")
                     .font(.title)
             }
             .padding()
@@ -26,14 +26,18 @@ struct ContentView: View {
                 }
             }
             .ornament(attachmentAnchor: .scene(.top), contentAlignment: .bottom) {
-                HStack(spacing: 15) {
-                    Button(action: { }) { Image(systemName: "visionpro") }
-                    Button(action: { }) { Image(systemName: "macbook.and.visionpro") }
-                    Button(action: { }) { Image(systemName: "macbook") }
+                VStack {
+                    Text("Ornament")
+                        .font(.headline)
+                    HStack(spacing: 15) {
+                        Button(action: { }) { Image(systemName: "visionpro") }
+                        Button(action: { }) { Image(systemName: "macbook.and.visionpro") }
+                        Button(action: { }) { Image(systemName: "macbook") }
+                    }
+                    .padding(15)
+                    .imageScale(.large)
+                    .glassBackgroundEffect()
                 }
-                .padding(15)
-                .imageScale(.large)
-                .glassBackgroundEffect()
             }
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
