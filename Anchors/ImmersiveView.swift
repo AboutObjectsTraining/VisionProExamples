@@ -12,9 +12,13 @@ struct ImmersiveView: View {
     @State var anchorEntity: Entity = {
         let anchorEntity = AnchorEntity(.plane(.vertical,
                                                classification: .wall,
-                                               minimumBounds: SIMD2<Float>(0.6, 0.6)))
+                                               minimumBounds: [0.5, 0.5]))
         
-        let planeMesh = MeshResource.generatePlane(width: 4, depth: 3, cornerRadius: 0.1)
+        let planeMesh = MeshResource.generatePlane(
+            width: 1,
+            depth: 0.75,
+            cornerRadius: 0.1
+        )
         let imageMaterial = Self.loadImageMaterial(imageName: "Think Different")
         let entity = ModelEntity(mesh: planeMesh, materials: [imageMaterial])
         

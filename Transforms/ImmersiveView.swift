@@ -16,6 +16,13 @@ struct ImmersiveView: View {
     @State private var toyRocketEntity = Entity()
     @State private var shouldPlayAudio = false
     
+    @State private var playbackController: AudioPlaybackController?
+    
+    var doubleTapGesture: some Gesture {
+        TapGesture(count: 2)
+            .onEnded { _ in toggleAirplaneEngineAudio() }
+    }
+    
     var body: some View {
         RealityView { content in
             if let scene = try? await Entity(named: "Toys", in: realityKitContentBundle) {
@@ -26,6 +33,7 @@ struct ImmersiveView: View {
                     print(entity)
                     toyPlaneEntity = entity
                     toyPlaneEntity.generateCollisionShapes(recursive: true)
+                    await loadPlaybackController()
                     
                     let parentEntity = Entity()
                     content.add(parentEntity)
@@ -42,18 +50,13 @@ struct ImmersiveView: View {
                     toyRocketEntity.setParent(parentEntity)
                 }
             }
-        } update: { _ in
-            Task {
-                if shouldPlayAudio {
-                    await playAirplaneEngineAudio()
-                }
-            }
         }
+        .gesture(doubleTapGesture)
         .pitchAndYaw(targetEntity: toyPlaneEntity, sensitivity: 4)
         .pitchAndYaw(targetEntity: toyRocketEntity, sensitivity: 4)
     }
     
-    @MainActor private func playAirplaneEngineAudio() async {
+    @MainActor private func loadPlaybackController() async {
         
         guard let audioEntity = rootEntity.findEntity(named: "AirplaneEngineAudio"),
               let resource = try? await AudioFileResource(named: "/Root/AntiqueAirplaneEngineStart01",
@@ -61,8 +64,18 @@ struct ImmersiveView: View {
                                                           in: realityKitContentBundle)
         else { return }
         
-        let playbackController = audioEntity.prepareAudio(resource)
-        playbackController.play()
+        playbackController = audioEntity.prepareAudio(resource)
+    }
+    
+    private func toggleAirplaneEngineAudio() {
+        shouldPlayAudio.toggle()
+        
+        if shouldPlayAudio {
+            playbackController?.play()
+        } else {
+            playbackController?.pause()
+        }
+        print(playbackController?.isPlaying ?? "nil playbackController")
     }
 }
 

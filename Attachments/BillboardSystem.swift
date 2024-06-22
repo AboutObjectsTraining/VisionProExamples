@@ -25,13 +25,13 @@ public struct BillboardSystem: System {
 
     public func update(context: SceneUpdateContext) {
         let entitiesWithBillboarding = context.scene.performQuery(Self.query).map { $0 }
-
+        
         guard !entitiesWithBillboarding.isEmpty,
               let deviceAnchor = worldTrackingProvider.queryDeviceAnchor(atTimestamp: CACurrentMediaTime())
         else { return }
-
+        
         let translation = Transform(matrix: deviceAnchor.originFromAnchorTransform).translation
-
+        
         for entity in entitiesWithBillboarding {
             entity.look(at: translation,
                         from: entity.position(relativeTo: nil),

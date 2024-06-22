@@ -18,7 +18,7 @@ struct ImmersiveView: View {
     @State private var toyRocketEntity = Entity()
     
     var body: some View {
-
+        
         RealityView { content, attachments in
             if let scene = try? await Entity(named: "Toys", in: realityKitContentBundle) {
                 rootEntity = scene

@@ -58,23 +58,23 @@ struct ImmersiveView: View {
             }
     }
     
-// Targeted to any entity
-var dragGesture: some Gesture {
-    DragGesture()
-        .targetedToAnyEntity()
-        .onChanged { value in
-            let entity = value.entity
-            if currentTransform == nil {
-                currentTransform = entity.transform
+    // Targeted to any entity
+    var dragGesture: some Gesture {
+        DragGesture()
+            .targetedToAnyEntity()
+            .onChanged { value in
+                let entity = value.entity
+                if currentTransform == nil {
+                    currentTransform = entity.transform
+                }
+                
+                let translation = value.convert(value.translation3D, from: .local, to: entity.parent!)
+                entity.transform.translation = currentTransform!.translation + translation
             }
-            
-            let translation = value.convert(value.translation3D, from: .local, to: entity.parent!)
-            entity.transform.translation = currentTransform!.translation + translation
-        }
-        .onEnded { _ in
-            currentTransform = nil
-        }
-}
+            .onEnded { _ in
+                currentTransform = nil
+            }
+    }
     
     var body: some View {
         RealityView { content in
