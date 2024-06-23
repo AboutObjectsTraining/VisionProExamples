@@ -26,12 +26,14 @@ public struct BillboardSystem: System {
     public func update(context: SceneUpdateContext) {
         let entitiesWithBillboarding = context.scene.performQuery(Self.query).map { $0 }
         
+        // Get the current device pose
         guard !entitiesWithBillboarding.isEmpty,
               let deviceAnchor = worldTrackingProvider.queryDeviceAnchor(atTimestamp: CACurrentMediaTime())
         else { return }
         
         let translation = Transform(matrix: deviceAnchor.originFromAnchorTransform).translation
         
+        // Orient billboarding entities towards the device
         for entity in entitiesWithBillboarding {
             entity.look(at: translation,
                         from: entity.position(relativeTo: nil),
