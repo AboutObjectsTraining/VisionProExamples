@@ -51,7 +51,6 @@
 		B47AE1EA2C17867B00F981F8 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = B47AE1E92C17867B00F981F8 /* RealityKitContent */; };
 		B47AE1EC2C17867B00F981F8 /* Model3DApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47AE1EB2C17867B00F981F8 /* Model3DApp.swift */; };
 		B47AE1EE2C17867B00F981F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47AE1ED2C17867B00F981F8 /* ContentView.swift */; };
-		B47AE1F02C17867B00F981F8 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47AE1EF2C17867B00F981F8 /* ImmersiveView.swift */; };
 		B47AE1F22C17867D00F981F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47AE1F12C17867D00F981F8 /* Assets.xcassets */; };
 		B47AE1F52C17867D00F981F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47AE1F42C17867D00F981F8 /* Preview Assets.xcassets */; };
 		B47AE1FB2C17875600F981F8 /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = B47AE1FA2C17875600F981F8 /* toy_car.usdz */; };
@@ -156,7 +155,6 @@
 		B47AE1E72C17867B00F981F8 /* Model3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Model3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47AE1EB2C17867B00F981F8 /* Model3DApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model3DApp.swift; sourceTree = "<group>"; };
 		B47AE1ED2C17867B00F981F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B47AE1EF2C17867B00F981F8 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		B47AE1F12C17867D00F981F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B47AE1F42C17867D00F981F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B47AE1F62C17867D00F981F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -378,20 +376,20 @@
 		B45868EF2BC59FDF00D7DADC = {
 			isa = PBXGroup;
 			children = (
-				B45868FA2BC59FDF00D7DADC /* VisionProExamples */,
 				B45868FB2BC59FDF00D7DADC /* Packages */,
+				B45868FA2BC59FDF00D7DADC /* VisionProExamples */,
+				B4F27FF82C0E4386004C185E /* WindowGroups */,
+				B47AE1E82C17867B00F981F8 /* Model3D */,
+				B4A842CC2C24BBB300B6C4B5 /* Ornaments */,
 				B45869152BC5A28E00D7DADC /* LoadingAModel */,
 				B4C1A14D2BCD64C500E8ACB8 /* ProgrammaticModel */,
 				B43B138A2BD158F10018C15B /* RotatingCubes */,
 				B46786282BE1638D0004B275 /* SpinningCube */,
+				B493E8E82C22120200E3448E /* Gestures */,
 				B4D5F2282BEE78650018C80A /* Transforms */,
 				B426BB632BFF9BCD00281EA0 /* Attachments */,
-				B4F27FF82C0E4386004C185E /* WindowGroups */,
-				B47AE1E82C17867B00F981F8 /* Model3D */,
-				B4F280112C0F969F004C185E /* UnitTests */,
 				B493E8D12C20E84F00E3448E /* Anchors */,
-				B493E8E82C22120200E3448E /* Gestures */,
-				B4A842CC2C24BBB300B6C4B5 /* Ornaments */,
+				B4F280112C0F969F004C185E /* UnitTests */,
 				B45868F92BC59FDF00D7DADC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -497,7 +495,6 @@
 				B47AE1FE2C178C8E00F981F8 /* toy_biplane_idle.usdz */,
 				B47AE1EB2C17867B00F981F8 /* Model3DApp.swift */,
 				B47AE1ED2C17867B00F981F8 /* ContentView.swift */,
-				B47AE1EF2C17867B00F981F8 /* ImmersiveView.swift */,
 				B47AE1F12C17867D00F981F8 /* Assets.xcassets */,
 				B47AE1F62C17867D00F981F8 /* Info.plist */,
 				B47AE1F32C17867D00F981F8 /* Preview Content */,
@@ -1180,7 +1177,6 @@
 			files = (
 				B47AE1EE2C17867B00F981F8 /* ContentView.swift in Sources */,
 				B47AE1EC2C17867B00F981F8 /* Model3DApp.swift in Sources */,
-				B47AE1F02C17867B00F981F8 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
