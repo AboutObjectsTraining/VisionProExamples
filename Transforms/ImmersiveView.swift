@@ -98,18 +98,7 @@ private struct PitchAndYawModifier: ViewModifier {
             .gesture(DragGesture()
                 .targetedToEntity(entity)
                 .onChanged { value in
-                    let location3D = value.convert(value.location3D, from: .local, to: .scene)
-                    let startLocation3D = value.convert(value.startLocation3D, from: .local, to: .scene)
-                    let delta = location3D - startLocation3D
-                    pitch = Double(delta.y) * sensitivity + basePitch
-                    
-                    // let isUpsideDown = abs(pitch) > .pi / 2
-                    yaw = Double(delta.x) * sensitivity + baseYaw
-                    
-                    let angleX = simd_quatf(angle: Float(yaw), axis: [0, 1, 0])
-                    let angleY = simd_quatf(angle: Float(-pitch), axis: [1, 0, 0])
-                    
-                    entity.orientation = angleY * angleX
+                    changeOrientation(value, sensitivity: 4)
                 }
                 .onEnded { value in
                     baseYaw = yaw
@@ -117,6 +106,22 @@ private struct PitchAndYawModifier: ViewModifier {
                     // print("yaw: \(yaw)")
                 }
             )
+    }
+    
+    private func changeOrientation(_ value: EntityTargetValue<DragGesture.Value>,
+                                   sensitivity: Double) {
+        
+        let location3D = value.convert(value.location3D, from: .local, to: .scene)
+        let startLocation3D = value.convert(value.startLocation3D, from: .local, to: .scene)
+        let delta = location3D - startLocation3D
+        yaw = Double(delta.x) * sensitivity + baseYaw
+        pitch = Double(delta.y) * sensitivity + basePitch
+        
+        let deltaX = simd_quatf(angle: Float(yaw), axis: [0, 1, 0])
+        let deltaY = simd_quatf(angle: Float(-pitch), axis: [1, 0, 0])
+        // print(pitch)
+        
+        value.entity.orientation = deltaY * deltaX
     }
 }
 
