@@ -82,16 +82,16 @@ struct ImmersiveView: View {
             let cube2 = makeCube(material: pinkMaterial)
             let cube3 = makeCube(material: myPhysicallyBasedMaterial)
             
+            content.add(cube1)
+            content.add(cube2)
+            content.add(cube3)
+            
             cube1.components.set(BlueComponent())
             cube2.components[PinkComponent.self] = PinkComponent()
             
             cube1.setPosition([-0.5, 1, -1.5], relativeTo: nil)
             cube2.setPosition([0.5, 1, -1.5], relativeTo: nil)
             cube3.setPosition([0, 1, -1.5], relativeTo: nil)
-            
-            content.add(cube1)
-            content.add(cube2)
-            content.add(cube3)
         }
         .gesture(dragGesture)
         .simultaneousGesture(blueTapGesture)

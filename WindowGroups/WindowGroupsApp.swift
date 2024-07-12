@@ -15,11 +15,7 @@ struct WindowGroupsApp: App {
     @State private var viewModel = ViewModel()
     @Environment(\.scenePhase) private var scenePhase
     
-    var body: some Scene {
-        WindowGroup {
-            ContentView(viewModel: viewModel)
-        }
-        
+    private var windowTwo: some Scene {
         WindowGroup(id: Self.windowTwo) {
             Text(Self.windowTwo)
                 .font(.title)
@@ -31,7 +27,9 @@ struct WindowGroupsApp: App {
             }
         }
         .defaultSize(width: 400, height: 300)
-        
+    }
+    
+    private var windowThree: some Scene {
         WindowGroup(id: Self.windowThree) {
             ZStack {
                 Color.blue
@@ -50,5 +48,14 @@ struct WindowGroupsApp: App {
         }
         .defaultSize(width: 400, height: 300, depth: 200)
         .windowStyle(.volumetric)
+    }
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView(viewModel: viewModel)
+        }
+        
+        windowTwo
+        windowThree
     }
 }
