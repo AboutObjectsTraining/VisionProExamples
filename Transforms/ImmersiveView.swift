@@ -34,20 +34,12 @@ struct ImmersiveView: View {
                     toyPlaneEntity = entity
                     toyPlaneEntity.generateCollisionShapes(recursive: true)
                     await loadPlaybackController()
-                    
-                    let parentEntity = Entity()
-                    content.add(parentEntity)
-                    toyPlaneEntity.setParent(parentEntity)
                 }
                 
                 if let entity = rootEntity.findEntity(named: "ToyRocket3") {
                     print(entity)
                     toyRocketEntity = entity
                     toyRocketEntity.generateCollisionShapes(recursive: true)
-                    
-                    let parentEntity = Entity()
-                    content.add(parentEntity)
-                    toyRocketEntity.setParent(parentEntity)
                 }
             }
         }
@@ -98,7 +90,7 @@ private struct PitchAndYawModifier: ViewModifier {
             .gesture(DragGesture()
                 .targetedToEntity(entity)
                 .onChanged { value in
-                    changeOrientation(value, sensitivity: 4)
+                    changeOrientation(value, sensitivity: sensitivity)
                 }
                 .onEnded { value in
                     baseYaw = yaw
@@ -124,7 +116,6 @@ private struct PitchAndYawModifier: ViewModifier {
         value.entity.orientation = deltaY * deltaX
     }
 }
-
 
 #Preview(immersionStyle: .mixed) {
     ImmersiveView()

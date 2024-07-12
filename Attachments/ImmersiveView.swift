@@ -69,8 +69,6 @@ struct ImmersiveView: View {
     }
 }
 
-
-
 extension View {
     func pitchAndYaw(targetEntity: Entity, sensitivity: Double = 0.0) -> some View {
         modifier(PitchAndYawModifier(entity: targetEntity, sensitivity: sensitivity))

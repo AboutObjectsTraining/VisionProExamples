@@ -28,6 +28,7 @@ public struct BillboardSystem: System {
         
         // Get the current device pose
         guard !entitiesWithBillboarding.isEmpty,
+              worldTrackingProvider.state == .running,
               let deviceAnchor = worldTrackingProvider.queryDeviceAnchor(atTimestamp: CACurrentMediaTime())
         else { return }
         

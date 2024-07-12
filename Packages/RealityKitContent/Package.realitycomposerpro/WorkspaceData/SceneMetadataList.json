@@ -15,7 +15,96 @@
     "objectMetadataList" : [
       [
         "5F3B7282-F919-404A-9FEC-BB2674854714",
+        "Root",
+        "ToyBiplane",
+        "geom"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5F3B7282-F919-404A-9FEC-BB2674854714",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5F3B7282-F919-404A-9FEC-BB2674854714",
+        "Root",
+        "ToyBiplane",
+        "geom",
+        "realistic"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5F3B7282-F919-404A-9FEC-BB2674854714",
+        "Root",
+        "ToyBiplane"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5F3B7282-F919-404A-9FEC-BB2674854714",
+        "Root",
+        "Material"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5F3B7282-F919-404A-9FEC-BB2674854714",
+        "Root",
+        "ToyBiplane",
+        "geom",
+        "realistic",
+        "materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5F3B7282-F919-404A-9FEC-BB2674854714",
+        "Root",
+        "ToyBiplane",
+        "geom",
+        "realistic",
+        "geo",
+        "lod0"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5F3B7282-F919-404A-9FEC-BB2674854714",
+        "Root",
+        "ToyBiplane",
+        "geom",
+        "realistic",
+        "geo"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5F3B7282-F919-404A-9FEC-BB2674854714",
+        "Root",
+        "ToyBiplane",
+        "geom",
+        "realistic",
+        "materials",
+        "materials"
       ],
       {
         "isExpanded" : true,
